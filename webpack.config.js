@@ -4,6 +4,8 @@ module.exports = {
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
 
+    target: "node",
+
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".ts", ".tsx", ".js"],
@@ -27,5 +29,9 @@ module.exports = {
                 loader: "source-map-loader",
             },
         ],
+    },
+    output: {
+        filename: "bundle.js",
+        path: path.resolve(__dirname, "dist"),
     },
 };
